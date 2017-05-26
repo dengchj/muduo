@@ -36,6 +36,7 @@ TcpServer::TcpServer(EventLoop* loop,
 {
   acceptor_->setNewConnectionCallback(
       boost::bind(&TcpServer::newConnection, this, _1, _2));
+      test();
 }
 
 TcpServer::~TcpServer()
